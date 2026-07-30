@@ -45,28 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
         timelineContainer.appendChild(div);
     });
 
-    // 4. Render Open When Cards
+    // 4. Render Open When Cards (Link Google Drive)
     const openWhenContainer = document.getElementById('open-when-container');
     CONFIG.openWhen.forEach((item, index) => {
         const div = document.createElement('div');
         div.className = 'open-when-card';
         
-        let audioHTML = (item.voiceNote && item.voiceNote.trim() !== "") 
-            ? `<audio controls src="${item.voiceNote}"></audio>` 
-            : '';
-        
         div.innerHTML = `
             <strong>💌 ${item.kondisi}</strong>
             <div class="card-content" id="card-${index}">
-                <p>${item.pesan}</p>
-                ${audioHTML}
+                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">${item.pesan}</p>
+                <a href="${item.driveLink}" target="_blank" class="btn-gdrive">📂 Buka di Google Drive</a>
             </div>
         `;
         
-        // Fitur klik untuk buka/tutup kartu
+        // Toggle ekspansi kartu
         div.addEventListener('click', (e) => {
-            // Mencegah klik pada audio player menutup kartu
-            if(e.target.tagName.toLowerCase() === 'audio') return; 
+            // Jika tombol link yang diklik, jangan tutup kartunya
+            if (e.target.tagName.toLowerCase() === 'a') return; 
             
             const content = document.getElementById(`card-${index}`);
             content.style.display = (content.style.display === 'block') ? 'none' : 'block';

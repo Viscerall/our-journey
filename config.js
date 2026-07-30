@@ -3,15 +3,13 @@ const CONFIG = {
     pasangan: {
         pihak1: {
             nama: "Nama Kamu",
-            kota: "Bogor, Indonesia", // Kota asal
-            timezone: "Asia/Jakarta",
-            foto: "assets/foto-saya.jpg" // Ganti dengan nama file fotomu
+            kota: "Bogor, Indonesia",
+            foto: "assets/foto-saya.jpg"
         },
         pihak2: {
             nama: "Nama Pasangan",
             kota: "Kota Pasangan",
-            timezone: "Asia/Tokyo", // Sesuaikan jika beda negara
-            foto: "assets/foto-pasangan.jpg" // Ganti dengan nama file foto pasangan
+            foto: "assets/foto-pasangan.jpg"
         }
     },
 
@@ -35,20 +33,24 @@ const CONFIG = {
             cerita: "Tulis pesan semangat tentang keputusan kalian memulai LDR.",
             foto: "assets/timeline-2.jpg"
         }
-        // Kamu bisa copy-paste blok di atas jika ingin menambah momen lain
     ],
 
-    // 4. Surat "Open When..."
+    // 4. Surat "Open When..." (Hanya Link Google Drive)
     openWhen: [
         {
             kondisi: "Buka saat kamu kangen...",
-            pesan: "Jarak kita mungkin jauh, tapi perasaanku selalu dekat. Lihat kalender, kita akan segera bertemu!",
-            voiceNote: "assets/vn-kangen.m4a" // Kosongkan tanda kutip ("") jika tidak ada audio
+            pesan: "Klik tombol di bawah ini untuk melihat pesan/foto khusus di Google Drive:",
+            driveLink: "https://drive.google.com/your-folder-link-1" // Masukkan link Google Drive kamu
         },
         {
             kondisi: "Buka saat kamu sedang lelah...",
-            pesan: "Kerjaan/kuliah memang berat, tapi kamu pasti bisa melewatinya. Istirahatlah sejenak, aku bangga padamu.",
-            voiceNote: ""
+            pesan: "Aku sudah menyiapkan sesuatu untuk menyemangatimu di sini:",
+            driveLink: "https://drive.google.com/your-folder-link-2"
+        },
+        {
+            kondisi: "Buka saat kamu butuh mendengar suaraku...",
+            pesan: "Dengarkan rekaman suaraku melalui link Google Drive berikut:",
+            driveLink: "https://drive.google.com/your-folder-link-3"
         }
     ],
 
@@ -59,6 +61,6 @@ const CONFIG = {
         { url: "assets/galeri-3.jpg", kategori: "Random" }
     ],
 
-    // 6. Playlist Spotify (Ambil dari opsi 'Share' -> 'Embed track/playlist' di Spotify)
+    // 6. Playlist Spotify Embed
     spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
 };
