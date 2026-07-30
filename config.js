@@ -77,14 +77,14 @@ const CONFIG = {
     // 5. Surat "Open When..." (Menjadi 2 Opsi Sahaja)
     openWhen: [
         {
-            kondisi: "Buka saat kamu kangen...",
-            pesan: "Klik tombol di bawah ini untuk melihat pesan/foto khusus di Google Drive:",
-            driveLink: "https://drive.google.com/your-folder-link-1"
+            kondisi: "Buka pas kamu kangen...",
+            pesan: "Klik tombol di bawah ini buat ngeliat vlog kita",
+            driveLink: "https://drive.google.com/drive/folders/1Ie0KgzEMlFgMAMVmPHebUErYlLPz6T4C"
         },
         {
-            kondisi: "Buka saat kamu sedang lelah...",
-            pesan: "Aku sudah menyiapkan sesuatu untuk menyemangatimu di sini:",
-            driveLink: "https://drive.google.com/your-folder-link-2"
+            kondisi: "Buka pas kamu lagi capek...",
+            pesan: "Ada apa nyak disini",
+            driveLink: "https://drive.google.com/drive/folders/1cWRUnSlGYG5I4OIdw6keQ9Bi6EG8YTie"
         }
     ],
 
