@@ -92,10 +92,10 @@ const CONFIG = {
     galeri: [
         { url: "assets/galeri-1.jpg", kategori: "1" },
         { url: "assets/galeri-2.jpg", kategori: "2" },
-        { url: "assets/galeri-3.JPG", kategori: "3" },
+        { url: "assets/galeri-3.jpg", kategori: "3" },
         { url: "assets/galeri-4.jpg", kategori: "1" },
         { url: "assets/galeri-5.jpg", kategori: "2" },
-        { url: "assets/galeri-6.JPG", kategori: "3" },
+        { url: "assets/galeri-6.jpg", kategori: "3" },
         { url: "assets/galeri-7.jpg", kategori: "1" },
         { url: "assets/galeri-8.jpg", kategori: "2" },
         { url: "assets/galeri-9.jpg", kategori: "3" },
