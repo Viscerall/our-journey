@@ -69,7 +69,11 @@ section {
 
 .profile h2 { font-size: 1.2rem; font-weight: 600; }
 .profile p { color: var(--text-secondary); font-size: 0.9rem; }
-.heart { font-size: 2.5rem; animation: pulse 1.5s infinite; }
+.heart { 
+    font-size: 2.5rem; 
+    animation: pulse 1.5s infinite; 
+    color: var(--accent-color); /* Ini akan membuat warnanya otomatis menjadi pink pastel */
+}
 
 @keyframes pulse {
     0% { transform: scale(1); }
@@ -154,9 +158,15 @@ footer { text-align: center; padding: 2rem; color: var(--accent-color); font-siz
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Membuat profil tersusun rapi dari atas ke bawah di HP */
+    .couple-profiles { 
+        flex-direction: column; 
+        gap: 0.5rem; 
+    }
+    
     .timeline-item { flex-direction: column; text-align: center; }
     .timeline-item img { width: 100%; height: 200px; }
-    .heart { font-size: 2rem; }
+    .heart { font-size: 2rem; margin: 0.5rem 0; }
 }
 
 /* Tombol Google Drive di Open When */
