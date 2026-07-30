@@ -14,9 +14,9 @@ const CONFIG = {
     },
 
     // 2. Playlist Spotify Embed
-    spotifyEmbed: '<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6BvMS7kY2B7qPekBjjhATh?utm_source=generator&si=a067b8d7ae104a96" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+    spotifyEmbed: '<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6BvMS7kY2B7qPekBjjhATh?utm_source=generator&si=cdf83933739f4083" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
 
-    // 3. Target Pertemuan Berikutnya
+    // 3. Target Pertemuan Berikutnyagit 
     nextMeeting: {
         tanggal: "2027-01-01T00:00:00",
         lokasi: "Stasiun/Bandara/Kafe Favorit"
