@@ -13,7 +13,7 @@ const CONFIG = {
         }
     },
 
-    // 2. Playlist Spotify Embed (Bagian Kedua)
+    // 2. Playlist Spotify Embed
     spotifyEmbed: '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
 
     // 3. Target Pertemuan Berikutnya
@@ -38,7 +38,7 @@ const CONFIG = {
         }
     ],
 
-    // 5. Surat "Open When..." (Hanya Link Google Drive, Voice Note Dihapus)
+    // 5. Surat "Open When..." (Menjadi 2 Opsi Sahaja)
     openWhen: [
         {
             kondisi: "Buka saat kamu kangen...",
