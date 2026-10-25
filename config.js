@@ -8,7 +8,7 @@ const CONFIG = {
         },
         pihak2: {
             nama: "Vanyuy",
-            kota: "Sumedang",
+            kota: "Blora",
             foto: "assets/foto-pasangan.webp"
         }
     },
@@ -18,7 +18,7 @@ const CONFIG = {
 
     // 3. Target Pertemuan Berikutnyagit 
     nextMeeting: {
-        tanggal: "2026-08-16T10:00:00",
+        tanggal: "2026-12-06T10:00:00",
         lokasi: "Stasiun Bogor"
     },
 
