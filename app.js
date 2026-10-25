@@ -13,21 +13,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetDate = new Date(CONFIG.nextMeeting.tanggal).getTime();
     const countdownElement = document.getElementById('countdown-timer');
 
-    const updateCountdown = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
+    if (isNaN(targetDate)) {
+        countdownElement.innerHTML = "<h3>Tanggal target belum diatur dengan benar</h3>";
+    } else {
+        const renderCountdown = () => {
+            const distance = targetDate - Date.now();
 
-        if (distance < 0) {
-            clearInterval(updateCountdown);
-            countdownElement.innerHTML = "<h3 style='color: var(--accent-color);'>Hari ini kita bertemu! 🤍</h3>";
-            return;
+            if (distance <= 0) {
+                const lewat = Math.abs(distance);
+                countdownElement.innerHTML = lewat < 86400000
+                    ? "<h3 style='color: var(--accent-color);'>Hari ini kita bertemu! 🤍</h3>"
+                    : "<h3 style='color: var(--accent-color);'>Sampai jumpa di pertemuan berikutnya 🤍</h3>";
+                return false;
+            }
+
+            document.getElementById('hari').textContent  = Math.floor(distance / 86400000);
+            document.getElementById('jam').textContent   = Math.floor((distance % 86400000) / 3600000);
+            document.getElementById('menit').textContent = Math.floor((distance % 3600000) / 60000);
+            document.getElementById('detik').textContent = Math.floor((distance % 60000) / 1000);
+            return true;
+        };
+
+        if (renderCountdown()) {
+            const timer = setInterval(() => { if (!renderCountdown()) clearInterval(timer); }, 1000);
         }
-
-        document.getElementById('hari').textContent = Math.floor(distance / (1000 * 60 * 60 * 24));
-        document.getElementById('jam').textContent = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById('menit').textContent = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        document.getElementById('detik').textContent = Math.floor((distance % (1000 * 60)) / 1000);
-    }, 1000);
+    }
 
     // 3. Render Timeline
     const timelineContainer = document.getElementById('timeline-container');
