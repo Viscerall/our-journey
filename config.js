@@ -61,6 +61,12 @@ const CONFIG = {
             foto: "assets/timeline-6.webp"
         },
         {
+            tanggal: "Juli 2026",
+            judul: "LDR Moment",
+            cerita: "Jujur ini fase terberat dari semua journey kita selama ini, rasanya kangen banget gilakk dan kita juga sering berantem disini. Tapi kita bisa selesain semua masalah yang ada, makasih ya nyonyoy udah bisa sabar ngertiin aku. Semoga kita bisa lewatin masa ini bareng bareng yaa",
+            foto: "assets/timeline-7.webp"
+        },
+        {
             tanggal: "12 Agustus 2026",
             judul: "Hari Itu Aku Menembakmu",
             cerita: "Hari terakhir KKN kamu, aku jemput dan akhirnya aku nemuin keberanian buat bilang semuanya. Bukan cuma temen lagi, tapi beneran. Deg-degan banget waktu itu, takut jawabannya bukan yang aku harapin, tapi ternyata kamu bilang iya. Sejak hari itu semuanya kerasa lebih terang, dan sampai sekarang aku ga pernah nyesel sekali pun.",
@@ -71,12 +77,6 @@ const CONFIG = {
             judul: "LDR Lagi: Capstone",
             cerita: "KKN selesai, tapi belum berarti kita bisa deket terus. Kamu harus lanjut capstone dan pindah ke Blora, jadi kita LDR lagi. Bedanya sekarang jaraknya lebih jauh dan waktu kita lebih sempit. Tapi kita udah pernah lewatin ini sekali, jadi harusnya kali ini juga bisa.",
             foto: "assets/timeline-10.webp"
-        },
-        {
-            tanggal: "Now",
-            judul: "LDR Moment",
-            cerita: "Jujur ini fase terberat dari semua journey kita selama ini, rasanya kangen banget gilakk dan kita juga sering berantem disini. Tapi kita bisa selesain semua masalah yang ada, makasih ya nyonyoy udah bisa sabar ngertiin aku. Semoga kita bisa lewatin masa ini bareng bareng yaa",
-            foto: "assets/timeline-7.webp"
         },
         {
             tanggal: "???",
