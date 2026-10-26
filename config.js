@@ -70,7 +70,7 @@ const CONFIG = {
             tanggal: "12 Agustus 2026",
             judul: "Hari Itu Aku Menembakmu",
             cerita: "Hari terakhir KKN kamu, aku jemput dan akhirnya aku nemuin keberanian buat bilang semuanya. Bukan cuma temen lagi, tapi beneran. Deg-degan banget waktu itu, takut jawabannya bukan yang aku harapin, tapi ternyata kamu bilang iya. Sejak hari itu semuanya kerasa lebih terang, dan sampai sekarang aku ga pernah nyesel sekali pun.",
-            foto: "assets/timeline-9.webp"
+            foto: "assets/timeline-menembak.webp"
         },
         {
             tanggal: "Agustus 2026",
