@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('nama1').textContent = CONFIG.pasangan.pihak1.nama;
     document.getElementById('kota1').textContent = CONFIG.pasangan.pihak1.kota;
     document.getElementById('foto1').src = CONFIG.pasangan.pihak1.foto;
+    document.getElementById('foto1').alt = CONFIG.pasangan.pihak1.nama;
 
     document.getElementById('nama2').textContent = CONFIG.pasangan.pihak2.nama;
     document.getElementById('kota2').textContent = CONFIG.pasangan.pihak2.kota;
     document.getElementById('foto2').src = CONFIG.pasangan.pihak2.foto;
+    document.getElementById('foto2').alt = CONFIG.pasangan.pihak2.nama;
 
     // 2. Render Countdown Timer
     document.getElementById('lokasi-ketemu').textContent = `Lokasi pertemuan: ${CONFIG.nextMeeting.lokasi}`;
@@ -14,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownElement = document.getElementById('countdown-timer');
 
     if (isNaN(targetDate)) {
-        countdownElement.innerHTML = "<h3>Tanggal target belum diatur dengan benar</h3>";
+        countdownElement.innerHTML = '<p class="countdown-message">Tanggal target belum diatur dengan benar</p>';
     } else {
         const renderCountdown = () => {
             const distance = targetDate - Date.now();
@@ -22,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (distance <= 0) {
                 const lewat = Math.abs(distance);
                 countdownElement.innerHTML = lewat < 86400000
-                    ? "<h3 style='color: var(--accent-color);'>Hari ini kita bertemu! 🤍</h3>"
-                    : "<h3 style='color: var(--accent-color);'>Sampai jumpa di pertemuan berikutnya 🤍</h3>";
+                    ? '<p class="countdown-message">Hari ini kita bertemu.</p>'
+                    : '<p class="countdown-message">Sampai jumpa di pertemuan berikutnya.</p>';
                 return false;
             }
 
@@ -45,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const div = document.createElement('div');
         div.className = 'timeline-item';
         div.innerHTML = `
-            <img src="${item.foto}" alt="${item.judul}" loading="lazy">
+            <img src="${item.foto}" alt="${item.judul}" loading="lazy" decoding="async">
             <div class="timeline-content">
                 <span>${item.tanggal}</span>
-                <h4>${item.judul}</h4>
+                <h3>${item.judul}</h3>
                 <p>${item.cerita}</p>
             </div>
         `;
@@ -59,21 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const openWhenContainer = document.getElementById('open-when-container');
     CONFIG.openWhen.forEach((item, index) => {
         const div = document.createElement('div');
-        div.className = 'open-when-card';
-        
+        div.className = 'open-when-card glass';
+
         div.innerHTML = `
-            <strong>💌 ${item.kondisi}</strong>
+            <strong>${item.kondisi}</strong>
             <div class="card-content" id="card-${index}">
-                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary);">${item.pesan}</p>
-                <a href="${item.driveLink}" target="_blank" class="btn-gdrive">📂 Buka di Google Drive</a>
+                <p>${item.pesan}</p>
+                <a href="${item.driveLink}" target="_blank" rel="noopener" class="btn-gdrive">Buka di Google Drive</a>
             </div>
         `;
-        
+
         // Toggle ekspansi kartu
         div.addEventListener('click', (e) => {
             // Jika tombol link yang diklik, jangan tutup kartunya
-            if (e.target.tagName.toLowerCase() === 'a') return; 
-            
+            if (e.target.tagName.toLowerCase() === 'a') return;
+
             const content = document.getElementById(`card-${index}`);
             content.style.display = (content.style.display === 'block') ? 'none' : 'block';
         });
@@ -86,7 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement('img');
         img.src = item.url;
         img.alt = item.kategori;
-        img.loading = "lazy";
+        img.loading = 'lazy';
+        img.decoding = 'async';
         galleryContainer.appendChild(img);
     });
 

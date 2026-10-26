@@ -1,75 +1,87 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Journey</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mobile.css"></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Journey</title>
+<meta name="description" content="Catatan perjalanan kita — timeline, galeri, dan surat untuk dibuka kapan pun.">
+<meta name="theme-color" content="#FDFCFC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <header class="hero">
-        <div class="couple-profiles">
+        <h1 class="hero-title">Our Journey</h1>
+        <p class="hero-sub">Catatan kita</p>
+        <div class="couple-profiles glass">
             <div class="profile">
-                <img id="foto1" src="" alt="Pihak 1" loading="lazy" decoding="async">
-                <h2 id="nama1"></h2>
-                <p id="kota1"></p>
+                <img id="foto1" alt="" loading="lazy" decoding="async">
+                <p class="profile-name" id="nama1"></p>
+                <p class="profile-city" id="kota1"></p>
             </div>
-            <div class="heart">🤍</div>
+            <div class="heart" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20.4s-7.4-4.5-7.4-9.5A4.35 4.35 0 0 1 12 8.2a4.35 4.35 0 0 1 7.4 2.7c0 5-7.4 9.5-7.4 9.5Z"/>
+                </svg>
+            </div>
             <div class="profile">
-                <img id="foto2" src="" alt="Pihak 2" loading="lazy" decoding="async">
-                <h2 id="nama2"></h2>
-                <p id="kota2"></p>
+                <img id="foto2" alt="" loading="lazy" decoding="async">
+                <p class="profile-name" id="nama2"></p>
+                <p class="profile-city" id="kota2"></p>
             </div>
         </div>
     </header>
 
-    <section class="countdown-section">
-        <h3>Countdown Hari Ketemu</h3>
-        <p id="lokasi-ketemu" class="location-text"></p>
-        <div class="timer" id="countdown-timer">
-            <div class="time-box"><span id="hari">0</span><p>Hari</p></div>
-            <div class="time-box"><span id="jam">0</span><p>Jam</p></div>
-            <div class="time-box"><span id="menit">0</span><p>Menit</p></div>
-            <div class="time-box"><span id="detik">0</span><p>Detik</p></div>
-        </div>
-    </section>
+    <main>
 
-     <section class="playlist-section">
-        <h3>Soundtrack Kita</h3>
-        <div id="playlist-container">   
-            <!-- Rendered by JS -->
-        </div>
-    </section>
+        <section class="countdown-section">
+            <h2>Countdown Hari Ketemu</h2>
+            <p id="lokasi-ketemu" class="location-text"></p>
+            <div class="timer" id="countdown-timer">
+                <div class="time-box glass"><span id="hari">0</span><p>Hari</p></div>
+                <div class="time-box glass"><span id="jam">0</span><p>Jam</p></div>
+                <div class="time-box glass"><span id="menit">0</span><p>Menit</p></div>
+                <div class="time-box glass"><span id="detik">0</span><p>Detik</p></div>
+            </div>
+        </section>
 
-    <section class="timeline-section">
-        <h3>Timeline Kita</h3>
-        <div class="timeline-container" id="timeline-container">
-            <!-- Rendered by JS -->
-        </div>
-    </section>
+        <section class="playlist-section">
+            <h2>Soundtrack Kita</h2>
+            <div id="playlist-container">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
 
-    <section class="open-when-section">
-        <h3>Open When...</h3>
-        <div class="cards-container" id="open-when-container">
-            <!-- Rendered by JS -->
-        </div>
-    </section>
+        <section class="timeline-section">
+            <h2>Timeline Kita</h2>
+            <div class="timeline-container" id="timeline-container">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
 
-    <section class="gallery-section">
-        <h3>Galeri</h3>
-        <div class="gallery-grid" id="gallery-container">
-            <!-- Rendered by JS -->
-        </div>
-    </section>
+        <section class="open-when-section">
+            <h2>Open When...</h2>
+            <div class="cards-container" id="open-when-container">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Galeri</h2>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <p>Made with love for us.</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="config.js"></script>
     <script src="app.js"></script>
 </body>
